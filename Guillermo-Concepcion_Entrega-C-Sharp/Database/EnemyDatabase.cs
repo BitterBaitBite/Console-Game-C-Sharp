@@ -22,31 +22,31 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Database {
 			switch (enemyType) {
 				case EnemyEnum.Mimic:
 					characterStats.Add(CharacterStatEnum.Strength, 5);
-					characterStats.Add(CharacterStatEnum.Constitution, 10);
-					characterStats.Add(CharacterStatEnum.Dexterity, 6);
+					characterStats.Add(CharacterStatEnum.Constitution, 18);
+					characterStats.Add(CharacterStatEnum.Dexterity, 0);
 					break;
 
 				case EnemyEnum.Goblin:
-					characterStats.Add(CharacterStatEnum.Strength, 8);
-					characterStats.Add(CharacterStatEnum.Constitution, 8);
-					characterStats.Add(CharacterStatEnum.Dexterity, 8);
+					characterStats.Add(CharacterStatEnum.Strength, 6);
+					characterStats.Add(CharacterStatEnum.Constitution, 5);
+					characterStats.Add(CharacterStatEnum.Dexterity, 18);
 					break;
 
 				case EnemyEnum.Orc:
 					characterStats.Add(CharacterStatEnum.Strength, 10);
 					characterStats.Add(CharacterStatEnum.Constitution, 10);
-					characterStats.Add(CharacterStatEnum.Dexterity, 7);
+					characterStats.Add(CharacterStatEnum.Dexterity, 10);
 					break;
 
 				case EnemyEnum.Serpent:
 					characterStats.Add(CharacterStatEnum.Strength, 10);
-					characterStats.Add(CharacterStatEnum.Constitution, 12);
-					characterStats.Add(CharacterStatEnum.Dexterity, 8);
+					characterStats.Add(CharacterStatEnum.Constitution, 14);
+					characterStats.Add(CharacterStatEnum.Dexterity, 12);
 					break;
 
 				case EnemyEnum.Dragon:
 					characterStats.Add(CharacterStatEnum.Strength, 15);
-					characterStats.Add(CharacterStatEnum.Constitution, 15);
+					characterStats.Add(CharacterStatEnum.Constitution, 20);
 					characterStats.Add(CharacterStatEnum.Dexterity, 5);
 					break;
 			}

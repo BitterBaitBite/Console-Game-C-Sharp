@@ -51,6 +51,7 @@
     <Compile Include="Classes\Enemy.cs" />
     <Compile Include="Classes\HealingRoom.cs" />
     <Compile Include="Classes\Item.cs" />
+    <Compile Include="Classes\RogueCharacter.cs" />
     <Compile Include="Classes\MageCharacter.cs" />
     <Compile Include="Classes\PlayerCharacter.cs" />
     <Compile Include="Classes\Room.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Classes\Weapon.cs" />
     <Compile Include="Database\EnemyDatabase.cs" />
     <Compile Include="Database\ItemDatabase.cs" />
+    <Compile Include="Interfaces\IHealable.cs" />
     <Compile Include="Interfaces\IDamageable.cs" />
     <Compile Include="Interfaces\IDamageSource.cs" />
     <Compile Include="Localization\EnemyHintLocalization.cs" />

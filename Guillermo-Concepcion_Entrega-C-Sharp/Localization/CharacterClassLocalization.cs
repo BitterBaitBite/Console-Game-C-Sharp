@@ -6,6 +6,7 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Localization {
 		public static readonly Dictionary<CharacterClassEnum, string> es_ES = new Dictionary<CharacterClassEnum, string> {
 			{CharacterClassEnum.Warrior, "Guerrero" },
 			{CharacterClassEnum.Mage, "Mago" },
+			{CharacterClassEnum.Rogue, "Pícaro" },
 		};
 	}
 }

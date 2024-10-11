@@ -25,6 +25,9 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 		// Start room actions and return a boolean indicating if the room actions are finished
 		public override bool StartRoom(PlayerCharacter player) {
 			ConsoleUtils.Narrator(Description);
+			ConsoleUtils.SystemOut("Pulse cualquier tecla para continuar...\n");
+			Console.ReadKey();
+			Console.Clear();
 
 			return RoomAction(player);
 		}

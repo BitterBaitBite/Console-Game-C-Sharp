@@ -2,6 +2,7 @@
 	enum CharacterClassEnum {
 		Warrior,
 		Mage,
-		Rogue
+		Rogue,
+		Druid
 	}
 }

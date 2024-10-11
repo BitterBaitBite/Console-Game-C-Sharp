@@ -1,4 +1,5 @@
 ﻿using Guillermo_Concepcion_Entrega_C_Sharp.Utils;
+using System;
 
 namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 	class Dungeon {
@@ -7,8 +8,8 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 
 		public int CurrentRoom { get; protected set; }
 
-		public Dungeon() {
-			DungeonMap = new Room[10];
+		public Dungeon(int roomNumber = 10) {
+			DungeonMap = new Room[roomNumber];
 			int roomLevel = 1;
 			CurrentRoom = 1;
 
@@ -27,6 +28,9 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 
 		public bool StartDungeon(PlayerCharacter player) {
 			ConsoleUtils.Narrator("Encuentras una oscura estructura, oculta entre la espesa vegetación de la salvaje selva que te rodea. La piedra de sus muros parece impenetrables, pero encuentras una gran y majestuosa entrada, ahora olvidada tras décadas de abandono. Entras en aquella mazmorra con los ojos bien abiertos, alerta a cualquier sonido, pues algo te dice que encontrarás numerosos enemigos, cuando presionas una losa a tus pies, accionando una verja de hierro forjado que cae a tus espaldas cubriendo la entrada. Solo puedes avanzar. Ya no hay vuelta atrás... \n");
+			ConsoleUtils.SystemOut("Pulse cualquier tecla para continuar...\n");
+			Console.ReadKey();
+			Console.Clear();
 
 			while (CurrentRoom <= DungeonMap.Length) {
 				ConsoleUtils.Info("Habitación {0}\n", CurrentRoom.ToString());

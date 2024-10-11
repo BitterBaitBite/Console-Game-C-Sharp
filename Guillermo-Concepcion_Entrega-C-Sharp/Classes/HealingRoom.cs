@@ -5,7 +5,10 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 	class HealingRoom : Room {
 
 		public HealingRoom() {
-			Description = "Entras en una habitación cubierta de maleza, y en el centro ves una elegante fuente con motivos que representan plantas y flores de lo más exóticas. Te acercas y, en la superficie del agua, ves tu reflejo. \nTe miras directamente a los ojos, y en un destello parece que te intercambies con el reflejo y que el mundo se diese la vuelta. Sigues en el mismo lugar, pero te sientes renovado. ¿Habrá sido imaginación tuya?\n";
+			Description = "Entras en una habitación cubierta de maleza, y en el centro ves una elegante fuente con motivos que representan plantas y flores de lo más exóticas.\n" +
+			"Te acercas y, en la superficie del agua, ves tu reflejo. Te miras directamente a los ojos, y en un destello parece que te intercambies con el reflejo y que el \n" +
+			"mundo se diese la vuelta. Sigues en el mismo lugar, pero te sientes renovado. \n" +
+			"¿Habrá sido imaginación tuya?\n";
 		}
 
 		// Starts room actions and returns a boolean indicating if the room actions are finished

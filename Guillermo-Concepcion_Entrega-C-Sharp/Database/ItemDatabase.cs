@@ -15,7 +15,8 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Database {
 		public static readonly Dictionary<int, Weapon> WeaponDB = new Dictionary<int, Weapon>() {
 			{200, new Weapon(200, "Espada corta", "", 40, 2, 5, 1.2f)},
 			{201, new Weapon(201, "Hacha de guerra", "", 60, 6, 10, 1.5f)},
-			{202, new Weapon(202, "Bastón mágico", "", 50, 1, 5, 2f)}
+			{202, new Weapon(202, "Bastón mágico", "", 50, 1, 5, 2f)},
+			{203, new Weapon(203, "Dagas dobles", "", 70, 1, 4, 3f)}
 		};
 	}
 }

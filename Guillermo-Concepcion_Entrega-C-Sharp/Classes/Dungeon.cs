@@ -12,7 +12,7 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 			int roomLevel = 1;
 			CurrentRoom = 1;
 
-			for (int i = CurrentRoom; i <= DungeonMap.Length; i++) {
+			for (int i = 1; i <= DungeonMap.Length; i++) {
 				if (i % 4 == 0) {
 					DungeonMap[i - 1] = new HealingRoom();
 					continue;

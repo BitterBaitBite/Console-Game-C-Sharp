@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 
 namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
-	abstract class Character : IDamageable, IDamageSource {
+	abstract class Character : IDamageable, IDamageSource, IHealable {
 		public string Name { get; protected set; }
 
 		public List<Stat> Stats { get; protected set; } = new List<Stat>();
@@ -40,18 +40,17 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 		}
 
 		// Heal added to character class instead of player for scaling purposes, so enemies could heal too
-		public void Heal() {
+		public int Heal() {
 			CurrentHealth = MaxHealth;
+
+			return CurrentHealth;
 		}
 
 		// Heals by amount added for scaling purposes, so we could add other healing options for any character
-		public void Heal(int amount) {
-			if (CurrentHealth + amount > MaxHealth) {
-				CurrentHealth = MaxHealth;
-				return;
-			}
+		public int Heal(int amount) {
+			CurrentHealth = Math.Min(CurrentHealth + amount, MaxHealth);
 
-			CurrentHealth += amount;
+			return CurrentHealth;
 		}
 
 		public int GetCurrentStatPoints() {
@@ -74,13 +73,15 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 			// Chance to dodge based on character dexterity
 			// dex.: -5 -> chance: 0% | dex.: 5 -> chance: 50%
 			float dodgeChance = dexterityModifier * 5 + 25;
-			if (RandomUtils.GetTrueOrFalse(dodgeChance)) {
-				CurrentHealth = Math.Max(0, CurrentHealth - rawDamage);
-				return rawDamage;
+			bool hasDodgedAttack = RandomUtils.HasChance(dodgeChance);
+
+			if (hasDodgedAttack) {
+				ConsoleUtils.Narrator("¡{0} consigue esquivar el ataque!\n", Name);
+				return 0;
 			}
 
-			ConsoleUtils.Narrator("¡{0} consigue esquivar el ataque!\n", Name);
-			return 0;
+			CurrentHealth = Math.Max(0, CurrentHealth - rawDamage);
+			return rawDamage;
 		}
 
 		public abstract int DoDamage(IDamageable damageable, bool criticalAttack);

@@ -57,18 +57,26 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 			switch (tempPlayer.CharacterClass) {
 				case CharacterClassEnum.Warrior:
 					playerRef = new WarriorCharacter(tempPlayer.Name, tempPlayer.CharacterArmor, tempPlayer.CharacterWeapon, tempPlayer.Money, tempPlayer.Stats);
-					ConsoleUtils.Success("Tu guerrero se ha creado correctamente.\n");
 					break;
+
 				case CharacterClassEnum.Mage:
 					playerRef = new MageCharacter(tempPlayer.Name, tempPlayer.CharacterArmor, tempPlayer.CharacterWeapon, tempPlayer.Money, tempPlayer.Stats);
-					ConsoleUtils.Success("Tu mago se ha creado correctamente.\n");
 					break;
+
+				case CharacterClassEnum.Rogue:
+					playerRef = new RogueCharacter(tempPlayer.Name, tempPlayer.CharacterArmor, tempPlayer.CharacterWeapon, tempPlayer.Money, tempPlayer.Stats);
+					break;
+
 				default:
 					playerRef = null;
 					ConsoleUtils.Error("Ha habido un error en la creación del personaje.\n");
-					break;
+					ConsoleUtils.SystemOut("Presiona cualquier tecla para continuar...\n");
+					Console.ReadKey();
+					Console.Clear();
+					return false;
 			}
 
+			ConsoleUtils.Success("Tu {0} se ha creado correctamente.\n", CharacterClassLocalization.es_ES[tempPlayer.CharacterClass]);
 			ConsoleUtils.SystemOut("Presiona cualquier tecla para continuar...\n");
 			Console.ReadKey();
 			Console.Clear();
@@ -185,6 +193,7 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 
 					tempPlayer.CharacterArmor = armor;
 					tempPlayer.Money -= tempPlayer.CharacterArmor.BuyValue;
+					tempPlayer.Stats[armor.StatBonus.Item1] += armor.StatBonus.Item2;
 
 					Console.Clear();
 					return creatorStep + 1;
@@ -236,6 +245,7 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 					if (tempPlayer.CharacterArmor != null) {
 						tempPlayer.Money += tempPlayer.CharacterArmor.BuyValue;
 						tempPlayer.CharacterArmor = null;
+						tempPlayer.Stats[tempPlayer.CharacterArmor.StatBonus.Item1] -= tempPlayer.CharacterArmor.StatBonus.Item2;
 					}
 					break;
 				case ItemTypeEnum.Weapon:

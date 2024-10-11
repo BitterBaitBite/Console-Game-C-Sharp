@@ -14,8 +14,8 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Utils {
 			return (random.NextDouble() - 0.5) > 0;
 		}
 
-		public static bool GetTrueOrFalse(double chancePercent) {
-			return (random.NextDouble() * 100 - chancePercent) > 0;
+		public static bool HasChance(double chancePercent) {
+			return ((random.NextDouble() * 100 - chancePercent) < 0);
 		}
 	}
 }

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AA508B7-8CB7-401A-A5EF-59C25B9E547C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Guillermo_Concepcion_Entrega_C_Sharp</RootNamespace>
+    <AssemblyName>Guillermo-Concepcion_Entrega-C-Sharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Armor.cs" />
+    <Compile Include="Classes\Character.cs" />
+    <Compile Include="Classes\CharacterCreator.cs" />
+    <Compile Include="Classes\CombatRoom.cs" />
+    <Compile Include="Classes\Dungeon.cs" />
+    <Compile Include="Classes\Enemy.cs" />
+    <Compile Include="Classes\HealingRoom.cs" />
+    <Compile Include="Classes\Item.cs" />
+    <Compile Include="Classes\MageCharacter.cs" />
+    <Compile Include="Classes\PlayerCharacter.cs" />
+    <Compile Include="Classes\Room.cs" />
+    <Compile Include="Classes\Stat.cs" />
+    <Compile Include="Classes\WarriorCharacter.cs" />
+    <Compile Include="Classes\Weapon.cs" />
+    <Compile Include="Database\EnemyDatabase.cs" />
+    <Compile Include="Database\ItemDatabase.cs" />
+    <Compile Include="Interfaces\IDamageable.cs" />
+    <Compile Include="Interfaces\IDamageSource.cs" />
+    <Compile Include="Localization\EnemyHintLocalization.cs" />
+    <Compile Include="Localization\EnemyLocalization.cs" />
+    <Compile Include="Localization\AttackTypeLocalization.cs" />
+    <Compile Include="Localization\ItemTypeLocalization.cs" />
+    <Compile Include="Localization\CharacterStatLocalization.cs" />
+    <Compile Include="Localization\CharacterClassLocalization.cs" />
+    <Compile Include="TheGame.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types\EnemyHintEnum.cs" />
+    <Compile Include="Types\AttackTypeEnum.cs" />
+    <Compile Include="Types\CharacterStatEnum.cs" />
+    <Compile Include="Types\CharacterClassEnum.cs" />
+    <Compile Include="Types\CharacterCreationStepEnum.cs" />
+    <Compile Include="Types\EnemyEnum.cs" />
+    <Compile Include="Types\ItemTypeEnum.cs" />
+    <Compile Include="Utils\ConsoleUtils.cs" />
+    <Compile Include="Utils\RandomUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -7,6 +7,7 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Localization {
 			{CharacterClassEnum.Warrior, "Guerrero" },
 			{CharacterClassEnum.Mage, "Mago" },
 			{CharacterClassEnum.Rogue, "Pícaro" },
+			{CharacterClassEnum.Druid, "Druida" }
 		};
 	}
 }

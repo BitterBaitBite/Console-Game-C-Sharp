@@ -48,7 +48,9 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 
 		// Heals by amount added for scaling purposes, so we could add other healing options for any character
 		public int Heal(int amount) {
-			CurrentHealth = Math.Min(CurrentHealth + amount, MaxHealth);
+			if (amount > 0) {
+				CurrentHealth = Math.Min(CurrentHealth + amount, MaxHealth);
+			}
 
 			return CurrentHealth;
 		}

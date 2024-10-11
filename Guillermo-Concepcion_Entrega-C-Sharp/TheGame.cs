@@ -18,7 +18,7 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp {
 			/*
 			 * DUNGEON START AND END CONTROL
 			 */
-			Dungeon dungeon = new Dungeon();
+			Dungeon dungeon = new Dungeon(12);
 
 			if (!dungeon.StartDungeon(player)) {
 				ConsoleUtils.Enemy("\t GAME OVER \t\n");

@@ -67,6 +67,10 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 					playerRef = new RogueCharacter(tempPlayer.Name, tempPlayer.CharacterArmor, tempPlayer.CharacterWeapon, tempPlayer.Money, tempPlayer.Stats);
 					break;
 
+				case CharacterClassEnum.Druid:
+					playerRef = new DruidCharacter(tempPlayer.Name, tempPlayer.CharacterArmor, tempPlayer.CharacterWeapon, tempPlayer.Money, tempPlayer.Stats);
+					break;
+
 				default:
 					playerRef = null;
 					ConsoleUtils.Error("Ha habido un error en la creación del personaje.\n");

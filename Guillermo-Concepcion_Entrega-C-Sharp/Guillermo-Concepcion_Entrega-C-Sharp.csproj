@@ -56,6 +56,7 @@
     <Compile Include="Classes\PlayerCharacter.cs" />
     <Compile Include="Classes\Room.cs" />
     <Compile Include="Classes\Stat.cs" />
+    <Compile Include="Classes\DruidCharacter.cs" />
     <Compile Include="Classes\WarriorCharacter.cs" />
     <Compile Include="Classes\Weapon.cs" />
     <Compile Include="Database\EnemyDatabase.cs" />

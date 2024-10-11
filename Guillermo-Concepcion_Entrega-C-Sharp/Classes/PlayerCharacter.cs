@@ -54,14 +54,12 @@ namespace Guillermo_Concepcion_Entrega_C_Sharp.Classes {
 			}
 
 			if (!int.TryParse(Console.ReadLine(), out attackIndex)) {
-				Console.Clear();
 				ConsoleUtils.Error("El valor introducido no es válido, inténtelo de nuevo.");
 
 				return GetAttackType();
 			}
 
 			if (attackIndex < 1 || attackIndex > attackCount) {
-				Console.Clear();
 				ConsoleUtils.Error("La opción introducida no es válida, inténtelo de nuevo.\n");
 
 				return GetAttackType();
